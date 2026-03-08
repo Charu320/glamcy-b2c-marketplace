@@ -14,7 +14,7 @@ const BenefitsSection = () => {
 
   return (
     <section id="benefits" className="py-24 bg-card" ref={ref}>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto pl-8 md:pl-12 pr-4">
         <div className={`text-center mb-16 space-y-4 transition-all duration-800 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <p className="font-body text-sm tracking-[0.3em] uppercase text-secondary font-semibold">
             Powered by Science & Nature

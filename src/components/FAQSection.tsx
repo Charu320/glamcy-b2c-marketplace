@@ -94,10 +94,16 @@ const FAQSection = () => {
           </h3>
           
           {faqCategories.map((cat, catIdx) => (
-            <div key={cat.category} className="mb-8">
-              <h4 className="font-body text-xs tracking-[0.2em] uppercase text-secondary font-semibold mb-4 pl-2">
-                {cat.category}
-              </h4>
+            <div key={cat.category} className="mb-12">
+              <div 
+                className="bg-gradient-to-r from-secondary/10 via-secondary/5 to-transparent rounded-xl p-6 mb-6 border border-secondary/20 hover:shadow-lg transition-all duration-300"
+                style={{ boxShadow: "var(--shadow-premium)" }}
+              >
+                <h4 className="font-heading text-xl md:text-2xl font-bold text-primary mb-2">
+                  {cat.category}
+                </h4>
+                <div className="w-16 h-0.5 bg-secondary" />
+              </div>
               <Accordion type="single" collapsible className="space-y-3">
                 {cat.faqs.map((faq, i) => (
                   <AccordionItem

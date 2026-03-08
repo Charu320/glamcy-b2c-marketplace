@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import slantedPic from "@/assets/slanted_pic.png";
 
 const HeroSection = () => {
@@ -22,7 +23,7 @@ const HeroSection = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-4 py-32 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="container mx-auto pl-8 md:pl-12 pr-4 py-32 grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div className="space-y-8 animate-fade-in-up">
           <p className="font-body text-sm tracking-[0.3em] uppercase text-secondary font-semibold">
             Even Glam Needs Care
@@ -35,19 +36,19 @@ const HeroSection = () => {
             Deep cleansing that hydrates — experience the luxury of true clarity.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a
-              href="#shop"
+            <Link
+              to="/shop"
               className="inline-block px-8 py-3.5 bg-secondary text-secondary-foreground font-body font-semibold text-sm tracking-wider uppercase rounded-sm hover:opacity-90 hover:scale-105 transition-all"
               style={{ boxShadow: "var(--shadow-gold)" }}
             >
               Shop Now
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link
+              to="/about"
               className="inline-block px-8 py-3.5 border-2 border-primary text-primary font-body font-semibold text-sm tracking-wider uppercase rounded-sm hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all"
             >
               Learn More
-            </a>
+            </Link>
           </div>
           <div className="flex gap-8 pt-4">
             {["Deep Cleansing", "Peach Extract", "Exfoliating Beads"].map((item, i) => (
@@ -62,12 +63,18 @@ const HeroSection = () => {
         <div className="flex justify-center animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
           <div className="relative group">
             <div className="absolute -inset-4 bg-secondary/10 rounded-3xl blur-3xl group-hover:bg-secondary/20 transition-all duration-700" />
-            <img
-              src={slantedPic}
-              alt="Glamcy Nourishing Face Wash product with packaging"
-              className="relative w-full max-w-md rounded-2xl animate-hero-float"
-              style={{ boxShadow: "var(--shadow-premium)" }}
-            />
+            <div className="relative">
+              <img
+                src={slantedPic}
+                alt="Glamcy Nourishing Face Wash product with packaging"
+                className="relative w-full max-w-md rounded-2xl"
+                style={{ 
+                  boxShadow: "var(--shadow-premium)",
+                }}
+              />
+            </div>
+            {/* Additional glow effect on hover */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-secondary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl pointer-events-none" />
           </div>
         </div>
       </div>
