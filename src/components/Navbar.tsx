@@ -9,6 +9,8 @@ const Navbar = () => {
     { label: "Home", href: "#hero" },
     { label: "About", href: "#about" },
     { label: "Benefits", href: "#benefits" },
+    { label: "FAQs", href: "#faq" },
+    { label: "Tips", href: "#tips" },
     { label: "Shop Now", href: "#shop" },
     { label: "Contact", href: "#contact" },
   ];
@@ -21,7 +23,6 @@ const Navbar = () => {
           <span className="font-heading text-2xl font-bold text-primary tracking-wide">Glamcy</span>
         </a>
 
-        {/* Desktop */}
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.label}>
@@ -35,15 +36,13 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile toggle */}
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-primary">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-background border-b border-border">
+        <div className="md:hidden bg-background border-b border-border animate-fade-in">
           <ul className="flex flex-col items-center gap-4 py-6">
             {navLinks.map((link) => (
               <li key={link.label}>

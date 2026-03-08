@@ -12,9 +12,12 @@ const Footer = () => {
               <p className="font-body text-xs text-primary-foreground/60">Even Glam Needs Care</p>
             </div>
           </div>
-          <p className="font-body text-xs text-primary-foreground/50">
-            © {new Date().getFullYear()} Glamcy. All rights reserved.
-          </p>
+          <div className="text-center">
+            <p className="font-body text-xs text-primary-foreground/60">JAI VIRAT BIOPHARMA</p>
+            <p className="font-body text-xs text-primary-foreground/50">
+              © {new Date().getFullYear()} Glamcy. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
